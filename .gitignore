@@ -1,0 +1,15 @@
+node_modules/
+dist/
+typings/
+*.d.ts
+*.log
+*.tgz
+
+# ionic
+www/build/
+platforms/
+plugins/
+*.swp
+
+.DS_Store
+Thumbs.db
