@@ -12,7 +12,8 @@ module.exports = function(defaults) {
       'reflect-metadata/**/*.+(js|js.map)',
       'rxjs/**/*.+(js|js.map)',
       '@angular/**/*.+(js|js.map)',
-      'agorapulse-apps-core/dist/**/*.+(js|js.map)'
+      '@ngrx/**/*.+(js|js.map)',
+      'demo-core/**/*.+(js|js.map)'
     ]
   });
 };

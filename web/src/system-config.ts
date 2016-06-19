@@ -3,12 +3,23 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
-   'agorapulse-apps-core': 'vendor/agorapulse-apps-core'
+    'demo-core': 'vendor/demo-core',
+    '@ngrx': 'vendor/@ngrx'
 };
 
 /** User packages configuration. */
 const packages: any = {
-  'agorapulse-apps-core': { main: 'dist/index' }
+  'demo-core': { main: 'index' },
+  'demo-core/counter': { main: 'index' },
+  'demo-core/foo': { main: 'index' },
+  '@ngrx/core': {
+      main: 'index.js',
+      format: 'cjs'
+  },
+  '@ngrx/store': {
+      main: 'index.js',
+      format: 'cjs'
+  }
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////

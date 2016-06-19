@@ -1,4 +1,11 @@
 <h1>
   {{title}}
 </h1>
+<h2>
+    {{counter$ | async}}
+</h2>
+<p>
+  <button (click)="increment()"> +1 </button>
+  <button (click)="decrement()"> -1 </button>
+</p>
 <app-foo></app-foo>

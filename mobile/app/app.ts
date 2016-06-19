@@ -4,8 +4,17 @@ import {StatusBar} from 'ionic-native';
 import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
 import {ListPage} from './pages/list/list';
   
+import { provideStore } from '@ngrx/store';
+
+import { REDUCER_PROVIDERS } from 'demo-core/app.reducer';
+import { CounterActions } from 'demo-core/app.actions';
+
 @Component({
-  templateUrl: 'build/app.html'
+  templateUrl: 'build/app.html',
+  providers: [
+          CounterActions,
+          provideStore(REDUCER_PROVIDERS)
+  ]
 })
 class MyApp {
   @ViewChild(Nav) nav: Nav;
