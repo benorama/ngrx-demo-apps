@@ -1,17 +1,18 @@
 
 ## Introduction
 
-This is a proof of concept that demonstrates the ability to share a Typescript package with core functionalities and business logic between an Angular2 web app and a Ionic2 mobile app (also based on Angular2).
+This is a proof of concept that demonstrates the ability to share a Typescript package with core functionalities and business logic between an Angular2 web app and a Ionic2 mobile app.
+
+Please check the Medium article [Hybrid mobile apps: sharing logic between Angular2 and Ionic2 apps]() for more info.
 
 **Goals:**
 
 * encapsulate all the business logic in a core module, based on [@ngrx/store](https://github.com/ngrx/store)
 * keep specific view layout, markup and navigation logic in the app projects.
 
-[@ngrx/store](https://github.com/ngrx/store) is a RxJS powered state management inspired by Redux for Angular 2 apps. 
+Note: [@ngrx/store](https://github.com/ngrx/store) is a RxJS powered state management inspired by Redux for Angular 2 apps. 
 It's currently the most popular way to structure complex business logic in Angular2 apps.
 
-You can see article in here..
 
 ## Running the apps locally
 

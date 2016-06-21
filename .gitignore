@@ -1,12 +1,11 @@
 node_modules/
 dist/
 tmp/
-typings/
-*.d.ts
+core/typings
+web/typings
+web/e2e/*.d.ts
 *.log
 *.tgz
-
-!web/src/typings.d.ts
 
 # ionic
 www/build/
