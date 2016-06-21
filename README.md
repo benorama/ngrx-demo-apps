@@ -20,6 +20,12 @@ You can see article in here..
 git clone https://github.com/benorama/ngrx-demo-apps.git
 ```
 
+Prerequisites:
+* [Typescript 1.8+](https://www.typescriptlang.org/index.html#download-links)
+* [Typings 1.0+](https://github.com/typings/typings)
+* [Angular CLI](https://cli.angular.io)
+* [Ionic CLI (from Ionic2 latest beta)](http://ionicframework.com/docs/cli/)
+
 Note: `ngrx-demo-core` module is shared between the apps with `npm link` but it could be published to `npmjs` and be used as a regular dependency.
 
 ### ngrx-demo-core module
@@ -30,7 +36,10 @@ One of the key config settings is `"declaration": true` in `tsconfig.json` which
 
 ```
 # Go into core module directory
-cd ngrx-depo-apps/core
+cd ngrx-demo-apps/core
+
+# Install dependencies (you can get a coffee...)
+npm install
 
 # Compile typescript into dist
 tsc
@@ -51,11 +60,16 @@ The shared module is now installed locally and can be used in other local npm pr
 Link `ngrx-demo-core` shared module and run the web app.
 
 ```
-// Go into web Angular2 app directory and create a symlink from the local node_modules folder to the global shared module symlink
+# Go into web Angular2 app directory
 cd ../../web
+
+# Install dependencies (you can get a burger...)
+npm install
+
+# Create a symlink from the local node_modules folder to the global shared module symlink
 npm link ngrx-demo-core
 
-// Run the web app locally
+# Run the web app locally
 ng serve
 ```
 
@@ -64,11 +78,17 @@ ng serve
 As we did for the web app, link the `ngrx-demo-core` shared module and run the mobile app.
 
 ```
-// Go into mobile Ionic2 app directory and create a symlink from the local node_modules folder to the global shared module symlink
+# Go into mobile Ionic2 app directory
 cd ../mobile
+
+# Install dependencies and typings (you can get a burger...)
+npm install
+typings install
+
+# Create a symlink from the local node_modules folder to the global shared module symlink
 npm link ngrx-demo-core
 
-// Run the mobile app locally
+# Run the mobile app locally
 ionic serve
 ```
 

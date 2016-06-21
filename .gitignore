@@ -6,6 +6,8 @@ typings/
 *.log
 *.tgz
 
+!web/src/typings.d.ts
+
 # ionic
 www/build/
 platforms/
