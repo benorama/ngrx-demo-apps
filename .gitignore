@@ -1,16 +1,21 @@
 node_modules/
 dist/
 tmp/
-core/typings
-web/typings
-web/e2e/*.d.ts
+
 *.log
 *.tgz
 
-# ionic
-www/build/
-platforms/
-plugins/
+# core
+core/typings/
+
+# web
+web/typings/
+web/e2e/*.d.ts
+
+# mobile
+mobile/www/build/
+mobile/platforms/
+mobile/plugins/
 *.swp
 
 .DS_Store
