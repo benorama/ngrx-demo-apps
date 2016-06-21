@@ -3,7 +3,7 @@
 
 This is a proof of concept that demonstrates the ability to share a Typescript package with core functionalities and business logic between an Angular2 web app and a Ionic2 mobile app.
 
-Please check the Medium article [Hybrid mobile apps: sharing logic between Angular2 and Ionic2 apps]() for more info.
+Please check the Medium article [Hybrid mobile apps: sharing logic between Angular2 and Ionic2 apps](https://medium.com/@benorama/hybrid-mobile-apps-sharing-logic-between-angular2-and-ionic2-apps-7c32145b90d5#.m1x3vpyc0) for more info.
 
 **Goals:**
 
