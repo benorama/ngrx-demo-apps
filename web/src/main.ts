@@ -1,18 +1,34 @@
 import { bootstrap } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
-import { provideStore } from '@ngrx/store';
+import { combineReducers, provideStore } from '@ngrx/store';
+import { compose } from '@ngrx/core/compose';
 
-import { WebAppComponent, environment } from './app/';
+import { AppComponent, environment } from './app';
 
-import { REDUCER_PROVIDERS } from 'demo-core/app.reducer';
-import { CounterActions } from 'demo-core/app.actions';
+import { counterReducer, CounterActions, FooService } from 'ngrx-demo-core';
 
 if (environment.production) {
   enableProdMode();
 }
 
-bootstrap(WebAppComponent, [
-   CounterActions,
-   provideStore(REDUCER_PROVIDERS),
+let actions = [
+  CounterActions,
+  // Add other actions here
+]
+
+let services = [
+  FooService,
+  // Add other services here
+]
+
+let reducers = compose(combineReducers)({
+    counterState: counterReducer,
+    // Add other state+reducers here
+});
+
+bootstrap(AppComponent, [
+   provideStore(reducers),
+   services,
+   actions
 ]);
 

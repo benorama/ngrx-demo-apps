@@ -9468,14 +9468,3 @@ body {
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   font-size: 1.4rem;
   background-color: #fff; }
-
-.getting-started p {
-  margin: 20px 0;
-  line-height: 22px;
-  font-size: 16px; }
-
-div.selection {
-  font-size: 22px;
-  display: block;
-  text-align: center;
-  padding-top: 5%; }

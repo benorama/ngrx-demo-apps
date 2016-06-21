@@ -3,15 +3,15 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
-    'demo-core': 'vendor/demo-core',
+    'ngrx-demo-core': 'vendor/ngrx-demo-core',
     '@ngrx': 'vendor/@ngrx'
 };
 
 /** User packages configuration. */
 const packages: any = {
-  'demo-core': { main: 'index' },
-  'demo-core/counter': { main: 'index' },
-  'demo-core/foo': { main: 'index' },
+  'ngrx-demo-core': { main: 'index' },
+  'ngrx-demo-core/counter': { main: 'index' },
+  'ngrx-demo-core/foo': { main: 'index' },
   '@ngrx/core': {
       main: 'index.js',
       format: 'cjs'

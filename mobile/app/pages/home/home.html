@@ -1,0 +1,18 @@
+<ion-navbar *navbar>
+  <ion-title>
+    Ngrx/Ionic2 mobile app
+  </ion-title>
+</ion-navbar>
+
+<ion-content class="home" padding>
+  <h2 text-center>
+      {{counter$ | async}}
+  </h2>
+  <p text-center>
+    <button (click)="increment()"> +1 </button>
+    <button (click)="decrement()"> -1 </button>
+  </p>
+  <p text-center>
+    <button (click)="reset()"> Reset </button>
+  </p>
+</ion-content>

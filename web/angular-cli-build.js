@@ -13,7 +13,7 @@ module.exports = function(defaults) {
       'rxjs/**/*.+(js|js.map)',
       '@angular/**/*.+(js|js.map)',
       '@ngrx/**/*.+(js|js.map)',
-      'demo-core/**/*.+(js|js.map)'
+      'ngrx-demo-core/**/*.+(js|js.map)'
     ]
   });
 };

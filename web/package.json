@@ -1,6 +1,6 @@
 {
-  "name": "web",
-  "version": "0.0.0",
+  "name": "ngrx-demo-web",
+  "version": "0.0.1",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {

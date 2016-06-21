@@ -1,8 +1,8 @@
 {
-  "name": "demo-core",
-  "version": "0.0.2",
-  "main": "dist/index.js",
-  "typings": "dist/index",
+  "name": "ngrx-demo-core",
+  "version": "0.0.1",
+  "main": "index.js",
+  "typings": "index",
   "scripts": {
     "postinstall": "typings install",
     "tsc": "tsc",

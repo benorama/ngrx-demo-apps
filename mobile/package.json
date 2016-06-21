@@ -1,4 +1,6 @@
 {
+  "name": "ngrx-demo-mobile",
+  "version": "0.0.1",
   "dependencies": {
     "@angular/common": "^2.0.0-rc.2",
     "@angular/compiler": "^2.0.0-rc.2",
@@ -43,7 +45,5 @@
       "version": "",
       "locator": "ios"
     }
-  ],
-  "name": "multiclient",
-  "description": "MultiClient: An Ionic project"
+  ]
 }
