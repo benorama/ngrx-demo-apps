@@ -3,6 +3,7 @@ import { ActionReducer, Action } from '@ngrx/store';
 import { CounterActions, CounterState, initialCounterState } from './';
 
 export const counterReducer: ActionReducer<CounterState> = (state: CounterState = initialCounterState, action: Action) => {
+    
     switch (action.type) {
         case CounterActions.INCREMENT:
             return Object.assign({}, state, {
@@ -14,7 +15,7 @@ export const counterReducer: ActionReducer<CounterState> = (state: CounterState 
                 total : state.total - 1
             });
 
-        case CounterActions.RESET:
+        case CounterActions.RESET_SUCCESS:
             return initialCounterState;
 
         default:

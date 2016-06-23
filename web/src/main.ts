@@ -2,11 +2,12 @@ import { bootstrap } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
 import { combineReducers, provideStore } from '@ngrx/store';
 import { compose } from '@ngrx/core/compose';
+import { runEffects } from '@ngrx/effects';
 import { storeLogger } from 'ngrx-store-logger';
 
 import { AppComponent, environment } from './app';
 
-import { counterReducer, CounterActions, FooService } from 'ngrx-demo-core';
+import { counterReducer, CounterActions, CounterEffects, FooService } from 'ngrx-demo-core';
 
 if (environment.production) {
   enableProdMode();
@@ -15,6 +16,11 @@ if (environment.production) {
 let actions = [
   CounterActions,
   // Add other actions here
+]
+
+let effects = [
+  CounterEffects,
+  // Add other effects here
 ]
 
 let services = [
@@ -29,6 +35,7 @@ let reducers = compose(storeLogger(), combineReducers)({
 
 bootstrap(AppComponent, [
    provideStore(reducers),
+   runEffects(effects),
    services,
    actions
 ]);

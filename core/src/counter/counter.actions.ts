@@ -25,4 +25,12 @@ export class CounterActions {
         };
     }
 
+    static RESET_SUCCESS: string = '[Counter] Reset surccess';
+    resetSuccess(): Action {
+        return {
+            type: CounterActions.RESET_SUCCESS
+        };
+    }
+    
+
 }

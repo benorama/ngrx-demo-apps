@@ -17,6 +17,10 @@ const packages: any = {
       main: 'index.js',
       format: 'cjs'
   },
+  '@ngrx/effects': {
+      main: 'index.js',
+      format: 'cjs'
+  },
   '@ngrx/store': {
       main: 'index.js',
       format: 'cjs'

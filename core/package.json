@@ -13,6 +13,7 @@
   "dependencies": {
     "@angular/core": "^2.0.0-rc.3",
     "@ngrx/core": "^1.0.0",
+    "@ngrx/effects": "^1.0.1",
     "@ngrx/store": "^2.0.0",
     "core-js": "^2.4.0",
     "reflect-metadata": "^0.1.3",

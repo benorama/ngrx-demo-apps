@@ -4,17 +4,21 @@ import { StatusBar } from 'ionic-native';
   
 import { combineReducers, provideStore } from '@ngrx/store';
 import { compose } from '@ngrx/core/compose';
+import { runEffects, StateUpdates } from '@ngrx/effects';
 import { storeLogger } from 'ngrx-store-logger';
 
-import { counterReducer } from 'ngrx-demo-core';
-import { CounterActions } from 'ngrx-demo-core';
-import { FooService } from 'ngrx-demo-core';
+import { counterReducer, CounterActions, CounterEffects, FooService } from 'ngrx-demo-core';
 
 import { HomePage } from './pages/home/home';
 
 let actions = [
   CounterActions,
   // Add other actions here
+]
+
+let effects = [
+  CounterEffects,
+  // Add other effects here
 ]
 
 let services = [
@@ -28,11 +32,6 @@ let reducers = compose(storeLogger(), combineReducers)({
 });
 
 @Component({
-  providers: [
-          provideStore(reducers),
-          services,
-          actions
-  ],
   template: '<ion-nav [root]="rootPage"></ion-nav>'
 })
 export class MyApp {
@@ -47,4 +46,9 @@ export class MyApp {
   }
 }
 
-ionicBootstrap(MyApp);
+ionicBootstrap(MyApp, [
+  provideStore(reducers),
+  //runEffects(effects),
+  services,
+  actions
+]);
