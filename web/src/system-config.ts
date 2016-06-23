@@ -4,6 +4,7 @@
 /** Map relative paths to URLs. */
 const map: any = {
     'ngrx-demo-core': 'vendor/ngrx-demo-core',
+    'ngrx-store-logger': 'vendor/ngrx-store-logger',
     '@ngrx': 'vendor/@ngrx'
 };
 
@@ -19,7 +20,8 @@ const packages: any = {
   '@ngrx/store': {
       main: 'index.js',
       format: 'cjs'
-  }
+  },
+  'ngrx-store-logger': { main: 'dist/index' }
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////

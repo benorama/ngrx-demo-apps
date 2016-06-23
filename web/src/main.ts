@@ -2,6 +2,7 @@ import { bootstrap } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
 import { combineReducers, provideStore } from '@ngrx/store';
 import { compose } from '@ngrx/core/compose';
+import { storeLogger } from 'ngrx-store-logger';
 
 import { AppComponent, environment } from './app';
 
@@ -21,7 +22,7 @@ let services = [
   // Add other services here
 ]
 
-let reducers = compose(combineReducers)({
+let reducers = compose(storeLogger(), combineReducers)({
     counterState: counterReducer,
     // Add other state+reducers here
 });

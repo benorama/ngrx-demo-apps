@@ -4,6 +4,7 @@ import { StatusBar } from 'ionic-native';
   
 import { combineReducers, provideStore } from '@ngrx/store';
 import { compose } from '@ngrx/core/compose';
+import { storeLogger } from 'ngrx-store-logger';
 
 import { counterReducer } from 'ngrx-demo-core';
 import { CounterActions } from 'ngrx-demo-core';
@@ -21,7 +22,7 @@ let services = [
   // Add other services here
 ]
 
-let reducers = compose(combineReducers)({
+let reducers = compose(storeLogger(), combineReducers)({
     counterState: counterReducer,
     // Add other state+reducers here
 });
