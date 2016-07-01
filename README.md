@@ -52,6 +52,8 @@ cp package.json dist/
 cd dist
 npm link
 # Or npm publish
+
+# Note: during dev, you can use 'tsc -w'
 ```
 
 The shared module is now installed locally and can be used in other local npm projects.
