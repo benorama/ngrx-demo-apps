@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import { ionicBootstrap, Platform, MenuController, Nav } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
-  
+
 import { combineReducers, provideStore } from '@ngrx/store';
 import { compose } from '@ngrx/core/compose';
 import { runEffects, StateUpdates } from '@ngrx/effects';
@@ -23,6 +23,7 @@ let effects = [
 
 let services = [
   FooService,
+  StateUpdates
   // Add other services here
 ]
 
