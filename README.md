@@ -43,13 +43,15 @@ cd ngrx-demo-apps/core
 npm install
 
 # Compile typescript into dist
+cd src/
 tsc
 
 # Copy package into dist
-cp package.json dist/
+cd ..
+cp package.json dist/out-tsc/
 
 # Go into dist to create a globally-installed symbolic link
-cd dist
+cd dist/out-tsc/
 npm link
 # Or npm publish
 

@@ -4,10 +4,9 @@ import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
 
 import { AppState } from './app.state';
-import { CounterActions } from 'ngrx-demo-core';
+import { CounterActions } from '@benorama/ngrx-demo-core';
 
 @Component({
-  moduleId: module.id,
   selector: 'ngrx-demo-app',
   templateUrl: 'app.component.html'
 })

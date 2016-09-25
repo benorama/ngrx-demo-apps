@@ -1,28 +1,40 @@
 {
-  "name": "ngrx-demo-core",
+  "name": "@benorama/ngrx-demo-core",
   "version": "0.0.1",
-  "main": "index.js",
-  "typings": "index",
+  "license": "MIT",
+  "angular-cli": {},
   "scripts": {
-    "postinstall": "typings install",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "typings": "typings"
+    "start": "ng serve",
+    "lint": "tslint \"src/**/*.ts\"",
+    "test": "ng test",
+    "pree2e": "webdriver-manager update",
+    "e2e": "protractor"
   },
-  "license": "ISC",
   "dependencies": {
-    "@angular/core": "^2.0.0-rc.5",
-    "@ngrx/core": "^1.0.2",
-    "@ngrx/effects": "^1.1.1",
-    "@ngrx/store": "^2.1.2",
+    "@angular/core": "2.0.1",
+    "@ngrx/core": "1.2.0",
+    "@ngrx/effects": "2.0.0-beta.3",
+    "@ngrx/store": "2.2.1",
     "core-js": "^2.4.1",
-    "reflect-metadata": "^0.1.8",
-    "rxjs": "5.0.0-beta.6",
-    "systemjs": "0.19.27",
-    "zone.js": "^0.6.15"
+    "rxjs": "5.0.0-beta.12",
+    "ts-helpers": "^1.1.1",
+    "zone.js": "^0.6.23"
   },
   "devDependencies": {
-    "typescript": "^1.8.10",
-    "typings": "^1.3.2"
-  }
+    "@types/jasmine": "^2.2.30",
+    "angular-cli": "1.0.0-beta.15",
+    "codelyzer": "~0.0.26",
+    "jasmine-core": "2.4.1",
+    "jasmine-spec-reporter": "2.5.0",
+    "karma": "1.2.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-cli": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-remap-istanbul": "^0.2.1",
+    "protractor": "4.0.5",
+    "ts-node": "1.2.1",
+    "tslint": "3.13.0",
+    "typescript": "2.0.2"
+  },
+  "typings": "dist/index.d.ts"
 }

@@ -1,7 +1,7 @@
 {
   "project": {
     "version": "1.0.0-beta.15",
-    "name": "ngrx-demo-web"
+    "name": "@benorama/ngrx-demo-core"
   },
   "apps": [
     {

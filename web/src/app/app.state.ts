@@ -1,4 +1,4 @@
-import { CounterState } from 'ngrx-demo-core';
+import { CounterState } from '@benorama/ngrx-demo-core';
 
 export interface AppState {
   counterState: CounterState,

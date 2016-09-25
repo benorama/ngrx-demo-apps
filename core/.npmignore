@@ -1,0 +1,10 @@
+node_modules/
+*.log
+*.tgz
+
+src/
+test/
+angular-cli.json
+tslint.json
+dist/test
+README.md

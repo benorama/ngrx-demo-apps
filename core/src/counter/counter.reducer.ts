@@ -1,6 +1,7 @@
 import { ActionReducer, Action } from '@ngrx/store';
 
-import { CounterActions, CounterState, initialCounterState } from './';
+import { CounterActions } from './counter.actions';
+import { CounterState, initialCounterState } from './counter.state';
 
 export const counterReducer: ActionReducer<CounterState> = (state: CounterState = initialCounterState, action: Action) => {
     
