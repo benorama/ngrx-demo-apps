@@ -44,7 +44,11 @@ npm install
 # Compile typescript into dist
 tsc
 
+# Copy package into dist
+cp package.json dist/
+
 # Go into dist to create a globally-installed symbolic link
+cd dist
 npm link
 # Or npm publish
 
