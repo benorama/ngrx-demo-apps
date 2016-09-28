@@ -7,14 +7,10 @@ import { storeLogger } from 'ngrx-store-logger';
 import { storeFreeze } from 'ngrx-store-freeze';
 import { share, Selector } from './shared/util';
 import { environment } from '../environments/environment';
-import * as fromCounter from 'ngrx-demo-core';
-
-export interface State {
-  counter: fromCounter.CounterState;
-}
+import { counterReducer } from 'ngrx-demo-core';
 
 const reducers = {
-  counter: fromCounter.counterReducer
+  counter: counterReducer
 };
 
 const developmentReducer = compose(storeFreeze, storeLogger(), combineReducers)(reducers);

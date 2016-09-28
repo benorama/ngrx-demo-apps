@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
 
-import { State } from './app.reducer';
+import { AppState } from './app.state';
 import * as counterActions from 'ngrx-demo-core';
 //import * as counterActions from './counter/counter.actions';
 
@@ -15,7 +15,7 @@ export class AppComponent {
 
   counter$: Observable<number>;
 
-  constructor(private store: Store<State>) {
+  constructor(private store: Store<AppState>) {
     this.counter$ = this.store.select(s => s.counter.total);
   }
 
