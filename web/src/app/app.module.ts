@@ -4,6 +4,7 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { CounterModule, counterReducer } from '@benorama/ngrx-demo-core';
+//import { CounterModule, counterReducer } from '../counter';
 import { AppComponent } from './app.component';
 
 @NgModule({

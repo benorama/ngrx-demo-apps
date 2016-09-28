@@ -4,7 +4,6 @@ node_modules/
 
 src/
 test/
-angular-cli.json
 tslint.json
 dist/test
 README.md

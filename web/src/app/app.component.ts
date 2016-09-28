@@ -5,13 +5,14 @@ import { Store } from '@ngrx/store';
 
 import { AppState } from './app.state';
 import { CounterActions } from '@benorama/ngrx-demo-core';
+//import { CounterActions } from '../counter';
 
 @Component({
-  selector: 'ngrx-demo-app',
+  selector: 'app-root',
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
-  
+
   counter$: Observable<number>;
 
   constructor(private counterActions: CounterActions,
