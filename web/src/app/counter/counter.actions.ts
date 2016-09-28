@@ -12,28 +12,28 @@ export const CounterActionTypes = {
 export class IncrementAction implements Action {
   type = CounterActionTypes.INCREMENT;
   constructor() {
-    console.log('REMOTE INCREMENT action');
+    console.log('INCREMENT action');
   }
 }
 
 export class DecrementAction implements Action {
   type = CounterActionTypes.DECREMENT;
   constructor() {
-    console.log('REMOTE DECREMENT action');
+    console.log('DECREMENT action');
   }
 }
 
 export class ResetAction implements Action {
   type = CounterActionTypes.RESET;
   constructor() {
-    console.log('REMOTE RESET action');
+    console.log('RESET action');
   }
 }
 
 export class ResetSuccessAction implements Action {
   type = CounterActionTypes.RESET_SUCCESS;
   constructor() {
-    console.log('REMOTE RESET_SUCCESS action');
+    console.log('RESET_SUCCESS action');
   }
 }
 
