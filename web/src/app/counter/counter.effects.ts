@@ -14,11 +14,18 @@ import { Effect, Actions } from '@ngrx/effects';
 import { Observable } from 'rxjs/Observable';
 import { empty } from 'rxjs/observable/empty';
 
+/*
 import {
   CounterActionTypes,
   ResetAction,
   ResetSuccessAction
 } from './counter.actions';
+*/
+import {
+  CounterActionTypes,
+  ResetAction,
+  ResetSuccessAction
+} from 'ngrx-demo-core';
 
 @Injectable()
 export class CounterEffects {
