@@ -5,7 +5,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { reducer } from './app.reducer';
-import { CounterEffects } from 'ngrx-demo-core';
+//import { CounterEffects } from 'ngrx-demo-core';
+import { CounterEffects } from './counter';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -17,9 +18,9 @@ import { HomePage } from '../pages/home/home';
   ],
   imports: [
     IonicModule.forRoot(MyApp),
-    //StoreModule.provideStore(reducer),
-    //StoreDevtoolsModule.instrumentOnlyWithExtension(),
-    //EffectsModule.runAfterBootstrap(CounterEffects),
+    StoreModule.provideStore(reducer),
+    StoreDevtoolsModule.instrumentOnlyWithExtension(),
+    EffectsModule.runAfterBootstrap(CounterEffects),
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -4,7 +4,8 @@ import { Store } from '@ngrx/store';
 
 // Share module
 import { AppState } from '../../app/app.state';
-import * as counterActions from 'ngrx-demo-core';
+//import * as counterActions from 'ngrx-demo-core';
+import * as counterActions from '../../app/counter';
 
 @Component({
   templateUrl: 'home.html'
@@ -13,20 +14,20 @@ export class HomePage {
 
   counter$: Observable<number>;
 
-  /*constructor(private store: Store<AppState>) {
+  constructor(private store: Store<AppState>) {
     this.counter$ = this.store.select(s => s.counter.total);
-  }*/
+  }
 
   decrement() {
-    //this.store.dispatch(new counterActions.DecrementAction());
+    this.store.dispatch(new counterActions.DecrementAction());
   }
 
   increment() {
-    //this.store.dispatch(new counterActions.IncrementAction());
+    this.store.dispatch(new counterActions.IncrementAction());
   }
 
   reset() {
-    //this.store.dispatch(new counterActions.ResetAction());
+    this.store.dispatch(new counterActions.ResetAction());
   }
 
 }

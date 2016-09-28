@@ -5,7 +5,8 @@ import { combineReducers } from '@ngrx/store';
 import { compose } from '@ngrx/core/compose';
 import { storeLogger } from 'ngrx-store-logger';
 import { storeFreeze } from 'ngrx-store-freeze';
-import { counterReducer } from 'ngrx-demo-core';
+//import { counterReducer } from 'ngrx-demo-core';
+import { counterReducer } from './counter';
 
 const reducers = {
   counter: counterReducer

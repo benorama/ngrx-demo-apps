@@ -21,6 +21,7 @@ export class CounterEffects {
     .ofType(CounterActionTypes.RESET)
     .startWith(new ResetAction())
     .map(() => {
+      console.log('REMOTE EFFECT');
       return new ResetSuccessAction()
     });
 
