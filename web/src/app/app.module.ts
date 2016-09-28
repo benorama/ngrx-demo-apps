@@ -4,14 +4,8 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
-//import { CounterModule } from 'ngrx-demo-core';
+import { CounterEffects, CounterModule } from 'ngrx-demo-core';
 import { reducer } from './app.reducer';
-
-/*
-  Remote effects do not work `EXCEPTION: No provider for Actions!`
-  import { CounterEffects } from 'ngrx-demo-core';
-*/
-import { CounterEffects } from './counter';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -23,10 +17,12 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    //  Remote effects do not work `Error: Unexpected value 'CounterModule' imported by the module 'AppModule'`
     //CounterModule,
     StoreModule.provideStore(reducer),
     StoreDevtoolsModule.instrumentOnlyWithExtension(),
-    EffectsModule.runAfterBootstrap(CounterEffects),
+    //  Remote effects do not work `EXCEPTION: No provider for Actions!`
+    //EffectsModule.runAfterBootstrap(CounterEffects), 
   ],
   providers: []
 })

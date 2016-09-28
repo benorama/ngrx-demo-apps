@@ -40,6 +40,7 @@ cd ngrx-demo-apps/core
 
 # Install dependencies (you can get a coffee...)
 npm install
+typings install
 
 # Compile typescript into dist
 tsc
@@ -85,7 +86,6 @@ cd ../mobile
 
 # Install dependencies and typings (you can get a burger...)
 npm install
-typings install
 
 # Create a symlink from the local node_modules folder to the global shared module symlink
 npm link ngrx-demo-core

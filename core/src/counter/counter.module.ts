@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { EffectsModule } from '@ngrx/effects';
 
-//import { CounterActions } from './counter.actions';
 import { CounterEffects } from './counter.effects';
 import { counterReducer } from './counter.reducer';
 
@@ -9,10 +8,9 @@ import { counterReducer } from './counter.reducer';
   declarations: [
   ],
   imports: [
-    EffectsModule.runAfterBootstrap(CounterEffects)
+    EffectsModule.run(CounterEffects)
   ],
   providers: [
-    //CounterActions
   ]
 })
 export class CounterModule {}
