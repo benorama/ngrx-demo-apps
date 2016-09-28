@@ -1,6 +1,6 @@
 import { CounterState } from 'ngrx-demo-core';
 
 export interface AppState {
-  counterState: CounterState,
+  counter: CounterState,
   // Add other states here
 }
