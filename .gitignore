@@ -16,6 +16,7 @@ web/e2e/*.d.ts
 mobile/www/build/
 mobile/platforms/
 mobile/plugins/
+mobile/typings/
 *.swp
 
 .DS_Store

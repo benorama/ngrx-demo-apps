@@ -1,5 +1,5 @@
 {
-  "name": "@benorama/ngrx-demo-core",
+  "name": "ngrx-demo-core",
   "version": "0.0.1",
   "license": "MIT",
   "dependencies": {

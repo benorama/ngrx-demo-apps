@@ -30,9 +30,6 @@ export class CounterEffects {
   @Effect() resetSuccess$ = this.actions$
     .ofType(CounterActionTypes.RESET)
     .startWith(new ResetAction())
-    .map(() => {
-      console.log('REMOTE EFFECT');
-      return new ResetSuccessAction()
-    });
+    .map(() => new ResetSuccessAction());
 
 }
