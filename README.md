@@ -50,7 +50,9 @@ cp package.json dist/
 
 # Go into dist to create a globally-installed symbolic link
 cd dist
-npm link
+# npm link
+# npm link does not work... so we use pack (temporarly)
+npm pack
 # Or npm publish
 
 # Note: during dev, you can use 'tsc -w'
@@ -70,7 +72,9 @@ cd ../../web
 npm install
 
 # Create a symlink from the local node_modules folder to the global shared module symlink
-npm link ngrx-demo-core
+# npm link ngrx-demo-core
+# npm link does not work... so we use pack/install (temporarly)
+npm install ../core/dist/ngrx-demo-core-0.0.1.tgz 
 
 # Run the web app locally
 ng serve
@@ -88,7 +92,9 @@ cd ../mobile
 npm install
 
 # Create a symlink from the local node_modules folder to the global shared module symlink
-npm link ngrx-demo-core
+# npm link ngrx-demo-core
+# npm link does not work... so we use pack/install (temporarly)
+npm install ../core/dist/ngrx-demo-core-0.0.1.tgz 
 
 # Run the mobile app locally
 ionic serve

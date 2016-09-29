@@ -17,11 +17,11 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    //  Remote effects do not work `Error: Unexpected value 'CounterModule' imported by the module 'AppModule'`
-    //CounterModule,
+    //  With npm link, effects do not work `Error: Unexpected value 'CounterModule' imported by the module 'AppModule'`
+    CounterModule,
     StoreModule.provideStore(reducer),
     StoreDevtoolsModule.instrumentOnlyWithExtension(),
-    //  Remote effects do not work `EXCEPTION: No provider for Actions!`
+    //  With npm link, effects do not work `EXCEPTION: No provider for Actions!`
     //EffectsModule.runAfterBootstrap(CounterEffects), 
   ],
   providers: []
