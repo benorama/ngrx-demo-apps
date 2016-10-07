@@ -2,10 +2,8 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
 
-// Share module
 import { AppState } from '../../app/app.state';
 import * as counterActions from 'ngrx-demo-core';
-//import * as counterActions from '../../app/counter';
 
 @Component({
   templateUrl: 'home.html'

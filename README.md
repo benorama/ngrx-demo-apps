@@ -100,6 +100,10 @@ npm install ../core/dist/ngrx-demo-core-0.0.1.tgz
 ionic serve
 ```
 
+Note: for more info on using external lib on Ionic2
+* [Third Party libraries in Ionic Apps](http://ionicframework.com/docs/v2/resources/third-party-libs/)
+* [App Scripts](http://ionicframework.com/docs/v2/resources/app-scripts/)
+
 ## Bugs and feedback
 
 If you have any questions or suggestions to improve the demo app, don't hesitate to submit an issue or a pull request!
