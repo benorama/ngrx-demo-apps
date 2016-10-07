@@ -22,10 +22,9 @@ git clone https://github.com/benorama/ngrx-demo-apps.git
 ```
 
 Prerequisites:
-* [Typescript 1.8+](https://www.typescriptlang.org/index.html#download-links)
-* [Typings 1.0+](https://github.com/typings/typings)
+* [Typescript 2.0+](https://www.typescriptlang.org/index.html#download-links)
 * [Angular CLI](https://cli.angular.io)
-* [Ionic CLI (from Ionic2 latest beta)](http://ionicframework.com/docs/cli/)
+* [Ionic CLI](http://ionicframework.com/docs/cli/)
 
 Note: `ngrx-demo-core` module is shared between the apps with `npm link` but it could be published to `npmjs` and be used as a regular dependency.
 
@@ -41,6 +40,7 @@ cd ngrx-demo-apps/core
 
 # Install dependencies (you can get a coffee...)
 npm install
+typings install
 
 # Compile typescript into dist
 tsc
@@ -50,7 +50,9 @@ cp package.json dist/
 
 # Go into dist to create a globally-installed symbolic link
 cd dist
-npm link
+# npm link
+# npm link does not work... so we use pack (temporarly)
+npm pack
 # Or npm publish
 
 # Note: during dev, you can use 'tsc -w'
@@ -70,7 +72,9 @@ cd ../../web
 npm install
 
 # Create a symlink from the local node_modules folder to the global shared module symlink
-npm link ngrx-demo-core
+# npm link ngrx-demo-core
+# npm link does not work... so we use pack/install (temporarly)
+npm install ../core/dist/ngrx-demo-core-0.0.1.tgz 
 
 # Run the web app locally
 ng serve
@@ -86,14 +90,19 @@ cd ../mobile
 
 # Install dependencies and typings (you can get a burger...)
 npm install
-typings install
 
 # Create a symlink from the local node_modules folder to the global shared module symlink
-npm link ngrx-demo-core
+# npm link ngrx-demo-core
+# npm link does not work... so we use pack/install (temporarly)
+npm install ../core/dist/ngrx-demo-core-0.0.1.tgz 
 
 # Run the mobile app locally
 ionic serve
 ```
+
+Note: for more info on using external lib on Ionic2
+* [Third Party libraries in Ionic Apps](http://ionicframework.com/docs/v2/resources/third-party-libs/)
+* [App Scripts](http://ionicframework.com/docs/v2/resources/app-scripts/)
 
 ## Bugs and feedback
 

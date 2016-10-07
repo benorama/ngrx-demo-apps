@@ -1,36 +1,32 @@
-import { Injectable } from '@angular/core';
 import { Action } from '@ngrx/store';
+import { label } from '../shared/util';
 
-@Injectable()
-export class CounterActions {
+export const CounterActionTypes = {
+  INCREMENT: label('[Layout] Increment'),
+  DECREMENT: label('[Layout] Decrement'),
+  RESET: label('[Layout] Reset'),
+  RESET_SUCCESS: label('[Layout] ResetSucess')
+};
 
-    static DECREMENT: string = '[Counter] Decrement';
-    decrement(): Action {
-        return {
-            type: CounterActions.DECREMENT
-        };
-    }
 
-    static INCREMENT: string = '[Counter] Increment';
-    increment(): Action {
-        return {
-            type: CounterActions.INCREMENT
-        };
-    }
-
-    static RESET: string = '[Counter] Reset';
-    reset(): Action {
-        return {
-            type: CounterActions.RESET
-        };
-    }
-
-    static RESET_SUCCESS: string = '[Counter] Reset success';
-    resetSuccess(): Action {
-        return {
-            type: CounterActions.RESET_SUCCESS
-        };
-    }
-    
-
+export class IncrementAction implements Action {
+  type = CounterActionTypes.INCREMENT;
 }
+
+export class DecrementAction implements Action {
+  type = CounterActionTypes.DECREMENT;
+}
+
+export class ResetAction implements Action {
+  type = CounterActionTypes.RESET;
+}
+
+export class ResetSuccessAction implements Action {
+  type = CounterActionTypes.RESET_SUCCESS;
+}
+
+export type CounterActions =
+    IncrementAction
+  | DecrementAction
+  | ResetAction
+  | ResetSuccessAction;

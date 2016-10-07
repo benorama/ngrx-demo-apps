@@ -1,0 +1,9 @@
+node_modules/
+*.log
+*.tgz
+
+src/
+test/
+tslint.json
+dist/test
+README.md

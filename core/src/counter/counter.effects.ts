@@ -1,23 +1,27 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { Action } from '@ngrx/store';
-import { StateUpdates, Effect, toPayload } from '@ngrx/effects'
+import { Effect, Actions } from '@ngrx/effects';
+import { Observable } from 'rxjs/Observable';;
 import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/do';
-
-import { CounterActions } from './';
+import 'rxjs/add/operator/startWith';
+import 'rxjs/add/observable/of';
+import {
+  CounterActionTypes,
+  ResetAction,
+  ResetSuccessAction
+} from './counter.actions';
 
 @Injectable()
 export class CounterEffects {
-  constructor(private counterActions: CounterActions,
-              private updates$: StateUpdates<any>) { }
+  constructor(
+    private actions$: Actions
+  ) { }
 
-  @Effect() resetSuccess$ = this.updates$
-      // Listen for the 'RESET' action
-      .whenAction(CounterActions.RESET)
-      .map(toPayload)
-      .map(payload => {
-            console.log('Doing some stuff on reset action');
-            return this.counterActions.resetSuccess();
-        });
+
+  @Effect() resetSuccess$ = this.actions$
+    .ofType(CounterActionTypes.RESET)
+    .startWith(new ResetAction())
+    .map(() => {
+      return new ResetSuccessAction()
+    });
+
 }
