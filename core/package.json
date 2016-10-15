@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "license": "MIT",
   "dependencies": {
-    "@angular/core": "2.0.2",
+    "@angular/core": "2.1.0",
     "@ngrx/core": "1.2.0",
     "@ngrx/effects": "2.0.0",
     "@ngrx/store": "2.2.1",
