@@ -32,10 +32,8 @@ Note: `ngrx-demo-core` module is shared between the apps with `npm link` but it 
 
 First, compile `ngrx-demo-core` shared module. 
 
-It is based on official Ionic module template:
+It is based on official Ionic module template, which supports Angular's ngc and Ahead-of-Time compiling out of the box.
 https://github.com/driftyco/ionic-module-template
-
-One of the key config settings is `"declaration": true` in `tsconfig.json` which will generate ‘.d.ts’ files (required to re-use the module in other Typescript projects). 
 
 ```
 # Go into core module directory
@@ -59,11 +57,11 @@ The shared module is now installed locally and can be used in other local npm pr
 
 ### ngrx-demo-web app
 
-Link `ngrx-demo-core` shared module and run the web app.
+Install or link `ngrx-demo-core` shared module and run the web app.
 
 ```
 # Go into web Angular2 app directory
-cd ../../web
+cd ../web
 
 # Install dependencies (you can get a burger...)
 npm install
@@ -79,7 +77,7 @@ ng serve
 
 ### ngrx-demo-mobile app
 
-As we did for the web app, link the `ngrx-demo-core` shared module and run the mobile app.
+As we did for the web app, install or link the `ngrx-demo-core` shared module and run the mobile app.
 
 ```
 # Go into mobile Ionic2 app directory
