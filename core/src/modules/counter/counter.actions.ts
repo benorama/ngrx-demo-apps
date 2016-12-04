@@ -1,11 +1,10 @@
 import { Action } from '@ngrx/store';
-import { label } from '../shared/util';
 
 export const CounterActionTypes = {
-  INCREMENT: label('[Layout] Increment'),
-  DECREMENT: label('[Layout] Decrement'),
-  RESET: label('[Layout] Reset'),
-  RESET_SUCCESS: label('[Layout] ResetSucess')
+  INCREMENT: '[Counter] Increment',
+  DECREMENT: '[Counter] Decrement',
+  RESET: '[Counter] Reset',
+  RESET_SUCCESS: '[Counter] ResetSucess'
 };
 
 

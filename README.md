@@ -32,6 +32,9 @@ Note: `ngrx-demo-core` module is shared between the apps with `npm link` but it 
 
 First, compile `ngrx-demo-core` shared module. 
 
+It is based on official Ionic module template:
+https://github.com/driftyco/ionic-module-template
+
 One of the key config settings is `"declaration": true` in `tsconfig.json` which will generate ‘.d.ts’ files (required to re-use the module in other Typescript projects). 
 
 ```
@@ -40,16 +43,10 @@ cd ngrx-demo-apps/core
 
 # Install dependencies (you can get a coffee...)
 npm install
-typings install
 
 # Compile typescript into dist
-tsc
+npm run build
 
-# Copy package into dist
-cp package.json dist/
-
-# Go into dist to create a globally-installed symbolic link
-cd dist
 # npm link
 # npm link does not work... so we use pack (temporarly)
 npm pack
@@ -74,7 +71,7 @@ npm install
 # Create a symlink from the local node_modules folder to the global shared module symlink
 # npm link ngrx-demo-core
 # npm link does not work... so we use pack/install (temporarly)
-npm install ../core/dist/ngrx-demo-core-0.0.1.tgz 
+npm install ../core/ngrx-demo-core-0.0.1.tgz 
 
 # Run the web app locally
 ng serve
@@ -94,7 +91,7 @@ npm install
 # Create a symlink from the local node_modules folder to the global shared module symlink
 # npm link ngrx-demo-core
 # npm link does not work... so we use pack/install (temporarly)
-npm install ../core/dist/ngrx-demo-core-0.0.1.tgz 
+npm install ../core/ngrx-demo-core-0.0.1.tgz 
 
 # Run the mobile app locally
 ionic serve

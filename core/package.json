@@ -1,20 +1,43 @@
 {
   "name": "ngrx-demo-core",
-  "author": "Benoit Hediard",
   "version": "0.0.1",
+  "author": "Benoit Hediard",
+  "description": "Core module with ngrx shared business logic to be used in an Angular2 web app and a Ionic2 mobile app.",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "ngc": "ngc",
+    "build": "rm -rf aot dist && npm run ngc",
+    "publishPackage": "npm run build && npm publish"
+  },
   "license": "MIT",
-  "dependencies": {
-    "@angular/core": "2.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benorama/ngrx-demo-apps.git"
+  },
+  "homepage": "https://github.com/benorama/ngrx-demo-apps#readme",
+  "bugs": {
+    "url": "https://github.com/benorama/ngrx-demo-apps/issues"
+  },
+  "keywords": [
+    "angular",
+    "angular2",
+    "ionic",
+    "ionic2",
+    "ngrx"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@angular/common": "2.2.1",
+    "@angular/compiler": "2.2.1",
+    "@angular/compiler-cli": "2.2.1",
+    "@angular/core": "2.2.1",
+    "@angular/platform-browser": "2.2.1",
     "@ngrx/core": "1.2.0",
     "@ngrx/effects": "2.0.0",
     "@ngrx/store": "2.2.1",
-    "core-js": "^2.4.1",
+    "@types/node": "^6.0.49",
     "rxjs": "5.0.0-beta.12",
-    "ts-helpers": "^1.1.1",
-    "zone.js": "^0.6.23"
-  },
-  "devDependencies": {
-    "tslint": "3.13.0",
-    "typescript": "2.0.2"
+    "typescript": "^2.0.9"
   }
 }

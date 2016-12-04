@@ -1,9 +1,6 @@
-node_modules/
-*.log
-*.tgz
-
-src/
-test/
-tslint.json
-dist/test
-README.md
+src
+node_modules
+.gitignore
+.npmignore
+tsconfig.json
+aot

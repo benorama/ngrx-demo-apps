@@ -2,8 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { EffectsModule } from '@ngrx/effects';
 
-import { CounterModule } from 'ngrx-demo-core';
+import { DemoCoreModule, CounterEffects } from 'ngrx-demo-core';
 import { reducer } from './app.reducer';
 import { AppComponent } from './app.component';
 
@@ -16,12 +17,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    //  With npm link, effects do not work `Error: Unexpected value 'CounterModule' imported by the module 'AppModule'`
-    CounterModule,
+    DemoCoreModule,
     StoreModule.provideStore(reducer),
     StoreDevtoolsModule.instrumentOnlyWithExtension(),
-    //  With npm link, effects do not work `EXCEPTION: No provider for Actions!`
-    //EffectsModule.runAfterBootstrap(CounterEffects), 
+    EffectsModule.runAfterBootstrap(CounterEffects)
   ],
   providers: []
 })

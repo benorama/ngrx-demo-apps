@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { EffectsModule } from '@ngrx/effects';
 
 import { reducer } from './app.reducer';
-import { CounterModule } from 'ngrx-demo-core';
+import { DemoCoreModule, CounterEffects } from 'ngrx-demo-core';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -16,12 +17,10 @@ import { HomePage } from '../pages/home/home';
   ],
   imports: [
     IonicModule.forRoot(MyApp),
-    // With npm link, effects do not work `Error: Unexpected value 'CounterModule' imported by the module 'AppModule'`
-    CounterModule,
+    DemoCoreModule,
     StoreModule.provideStore(reducer),
     StoreDevtoolsModule.instrumentOnlyWithExtension(),
-    //  With npm link, effects do not work `EXCEPTION: No provider for Actions!`
-    //EffectsModule.runAfterBootstrap(CounterEffects)
+    EffectsModule.runAfterBootstrap(CounterEffects)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
