@@ -6,6 +6,7 @@ import { AppState } from '../../app/app.state';
 import * as counterActions from 'ngrx-demo-core';
 
 @Component({
+  selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {

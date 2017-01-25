@@ -3,6 +3,10 @@
   "author": "Benoit Hediard",
   "version": "0.0.1",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benorama/ngrx-demo-apps.git"
+  },
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
@@ -13,11 +17,12 @@
     "e2e": "protractor"
   },
   "dependencies": {
-    "@angular/common": "2.4.3",
-    "@angular/compiler": "2.4.3",
-    "@angular/core": "2.4.3",
-    "@angular/platform-browser": "2.4.3",
-    "@angular/platform-browser-dynamic": "2.4.3",
+    "@angular/common": "2.4.4",
+    "@angular/compiler": "2.4.4",
+    "@angular/core": "2.4.4",
+    "@angular/platform-browser": "2.4.4",
+    "@angular/platform-browser-dynamic": "2.4.4",
+    "@angular/router": "3.4.4",
     "@ngrx/core": "1.2.0",
     "@ngrx/effects": "2.0.0",
     "@ngrx/store": "2.2.1",
@@ -29,7 +34,7 @@
     "zone.js": "0.7.4"
   },
   "devDependencies": {
-    "@angular/compiler-cli": "2.4.3",
+    "@angular/compiler-cli": "2.4.4",
     "@ngrx/store-devtools": "3.2.2",
     "@types/jasmine": "2.5.40",
     "@types/node": "^7.0.0",
