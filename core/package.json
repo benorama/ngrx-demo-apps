@@ -6,8 +6,9 @@
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "scripts": {
-    "ngc": "ngc",
-    "build": "rm -rf aot dist && npm run ngc",
+    "clean": "rm -rf ./aot/* && rm -rf ./dist/* && npm run clean:postbuild",
+    "clean:postbuild": "find ./src/ -type f -iname *.ngsummary.json -delete && find ./src/ -type f -iname *.ngfactory.ts -delete",
+    "build": "npm run clean && ngc -p tsconfig.json && npm run clean:postbuild",
     "publishPackage": "npm run build && npm publish"
   },
   "license": "MIT",
@@ -28,18 +29,18 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@angular/common": "2.4.5",
-    "@angular/compiler": "2.4.5",
-    "@angular/compiler-cli": "2.4.5",
-    "@angular/core": "2.4.5",
-    "@angular/platform-browser": "2.4.5",
+    "@angular/common": "4.0.1",
+    "@angular/compiler": "4.0.1",
+    "@angular/compiler-cli": "4.0.1",
+    "@angular/core": "4.0.1",
+    "@angular/platform-browser": "4.0.1",
     "@ngrx/core": "1.2.0",
-    "@ngrx/effects": "2.0.0",
+    "@ngrx/effects": "2.0.2",
     "@ngrx/store": "2.2.1",
-    "@types/node": "6.0.58",
-    "rxjs": "5.0.3",
-    "tslint": "4.3.1",
-    "typescript": "2.0.10",
-    "zone.js": "0.7.4"
+    "@types/node": "7.0.12",
+    "rxjs": "5.2.0",
+    "tslint": "5.0.0",
+    "typescript": "2.2.2",
+    "zone.js": "0.8.5"
   }
 }
