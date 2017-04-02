@@ -5,7 +5,7 @@ This is a proof of concept that demonstrates the ability to share a Typescript p
 
 Please check the Medium article [Hybrid mobile apps: sharing logic between Angular and Ionic apps](https://medium.com/@benorama/hybrid-mobile-apps-sharing-logic-between-angular2-and-ionic2-apps-7c32145b90d5#.m1x3vpyc0) for more info.
 
-[[https://github.com/benorama/ngrx-demo-apps/blob/master/ngrx-demo-apps.png]]
+![Demo](https://raw.github.com/benorama/ngrx-demo-apps/blob/master/ngrx-angular-web-app.png)
 
 **Goals:**
 
