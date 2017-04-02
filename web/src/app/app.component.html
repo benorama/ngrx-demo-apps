@@ -1,16 +1,50 @@
-<div class="container">
-  <h1>
-    Ngrx/Angular2 web app
-  </h1>
-  <hr/>
-  <h2>
-      {{counter$ | async}}
-  </h2>
-  <p>
-    <button (click)="increment()" class="btn btn-primary"> +1 </button>
-    <button (click)="decrement()" class="btn btn-primary"> -1 </button>
-  </p>
-  <p>
-    <button (click)="reset()" class="btn btn-primary"> Reset </button>
-  </p>
+<div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <h3 class="masthead-brand">Ngrx/Angular Web App</h3>
+                </div>
+            </div>
+
+            <div class="inner cover">
+
+                <h4>
+                    Counter example
+                </h4>
+                <h1>
+                    {{counter$ | async}}
+                </h1>
+                <p>
+                    <button (click)="increment()" class="btn btn-primary">+1</button>
+                    <button (click)="decrement()" class="btn btn-primary">-1</button>
+                </p>
+                <p>
+                    <button (click)="reset()" class="btn btn-secondary btn-sm">Reset</button>
+                </p>
+
+            </div>
+
+            <div class="mastfoot">
+                <div class="inner">
+                    <p>Cover template for <a href="https://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
 </div>
+
+
+<!--
+<h1 class="cover-heading">Cover your page.</h1>
+        <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+        <p class="lead">
+          <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+        </p>
+-->
