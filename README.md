@@ -1,17 +1,19 @@
 
 ## Introduction
 
-This is a proof of concept that demonstrates the ability to share a Typescript package with core functionalities and business logic between an Angular2 web app and a Ionic2 mobile app.
+This is a proof of concept that demonstrates the ability to share a Typescript package with core functionalities and business logic between an Angular web app and an Ionic mobile app.
 
-Please check the Medium article [Hybrid mobile apps: sharing logic between Angular2 and Ionic2 apps](https://medium.com/@benorama/hybrid-mobile-apps-sharing-logic-between-angular2-and-ionic2-apps-7c32145b90d5#.m1x3vpyc0) for more info.
+Please check the Medium article [Hybrid mobile apps: sharing logic between Angular and Ionic apps](https://medium.com/@benorama/hybrid-mobile-apps-sharing-logic-between-angular2-and-ionic2-apps-7c32145b90d5#.m1x3vpyc0) for more info.
+
+[[https://github.com/benorama/ngrx-demo-apps/blob/master/ngrx-demo-apps.png]]
 
 **Goals:**
 
-* encapsulate all the business logic in a core module, based on [@ngrx/store](https://github.com/ngrx/store)
+* encapsulate all the business logic in a core module, based on [@ngrx/store](https://github.com/ngrx/store),
 * keep specific view layout, markup and navigation logic in the app projects.
 
-Note: [@ngrx/store](https://github.com/ngrx/store) is a RxJS powered state management inspired by Redux for Angular 2 apps. 
-It's currently the most popular way to structure complex business logic in Angular2 apps.
+Note: [@ngrx/store](https://github.com/ngrx/store) is a RxJS powered state management inspired by Redux for Angular apps. 
+It's currently the most popular way to structure complex business logic in Angular apps.
 
 
 ## Running the apps locally
@@ -41,6 +43,7 @@ cd ngrx-demo-apps/core
 
 # Install dependencies (you can get a coffee...)
 npm install
+# Or yarn
 
 # Compile typescript into dist
 npm run build
@@ -65,6 +68,7 @@ cd ../web
 
 # Install dependencies (you can get a burger...)
 npm install
+# Or yarn
 
 # Create a symlink from the local node_modules folder to the global shared module symlink
 # npm link ngrx-demo-core
@@ -85,11 +89,12 @@ cd ../mobile
 
 # Install dependencies and typings (you can get a burger...)
 npm install
+# Or yarn
 
 # Create a symlink from the local node_modules folder to the global shared module symlink
 # npm link ngrx-demo-core
 # npm link does not work... so we use pack/install (temporarly)
-npm install ../core/ngrx-demo-core-0.0.1.tgz 
+npm install ../core/ngrx-demo-core-0.0.1.tgz
 
 # Run the mobile app locally
 ionic serve
