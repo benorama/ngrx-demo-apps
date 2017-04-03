@@ -41,16 +41,15 @@ https://github.com/driftyco/ionic-module-template
 # Go into core module directory
 cd ngrx-demo-apps/core
 
-# Install dependencies (you can get a coffee...)
-npm install
-# Or yarn
+# Install dependencies
+yarn
+# Or npm install
 
 # Compile typescript into dist
 npm run build
 
-# npm link
-# npm link does not work... so we use pack (temporarly)
-npm pack
+yarn link
+# Or npm pack
 # Or npm publish
 
 # Note: during dev, you can use 'tsc -w'
@@ -66,14 +65,13 @@ Install or link `ngrx-demo-core` shared module and run the web app.
 # Go into web Angular2 app directory
 cd ../web
 
-# Install dependencies (you can get a burger...)
-npm install
-# Or yarn
+# Install dependencies
+yarn
+# Or npm install
 
 # Create a symlink from the local node_modules folder to the global shared module symlink
-# npm link ngrx-demo-core
-# npm link does not work... so we use pack/install (temporarly)
-npm install ../core/ngrx-demo-core-0.0.1.tgz 
+yarn link "ngrx-demo-core"
+# Or npm install ../core/ngrx-demo-core-0.0.1.tgz (if you used npm pack)
 
 # Run the web app locally
 ng serve
@@ -88,13 +86,12 @@ As we did for the web app, install or link the `ngrx-demo-core` shared module an
 cd ../mobile
 
 # Install dependencies and typings (you can get a burger...)
-npm install
-# Or yarn
+yarn
+# Or npm install
 
 # Create a symlink from the local node_modules folder to the global shared module symlink
-# npm link ngrx-demo-core
-# npm link does not work... so we use pack/install (temporarly)
-npm install ../core/ngrx-demo-core-0.0.1.tgz
+yarn link "ngrx-demo-core"
+# Or npm install ../core/ngrx-demo-core-0.0.1.tgz (if you used npm pack)
 
 # Run the mobile app locally
 ionic serve
