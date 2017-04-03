@@ -1,7 +1,6 @@
 {
-  "name": "ionic3",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "name": "ngrx-demo-mobile",
+  "author": "Benoit Hediard",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
