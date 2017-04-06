@@ -9,6 +9,7 @@
     "ionic:serve": "ionic-app-scripts serve"
   },
   "dependencies": {
+    "@angular/animations": "4.0.1",
     "@angular/common": "4.0.1",
     "@angular/compiler": "4.0.1",
     "@angular/compiler-cli": "4.0.1",
@@ -26,7 +27,7 @@
     "@ngrx/effects": "2.0.2",
     "@ngrx/store": "2.2.1",
     "@ngrx/store-devtools": "3.2.4",
-    "ionic-angular": "2.3.0",
+    "ionic-angular": "3.0.0",
     "ionicons": "3.0.0",
     "ngrx-store-freeze": "0.1.9",
     "ngrx-store-logger": "0.1.7",
@@ -35,6 +36,7 @@
     "zone.js": "0.8.5"
   },
   "devDependencies": {
+    "@angular/tsc-wrapped": "4.0.1",
     "@ionic/app-scripts": "1.2.5",
     "@ionic/cli-build-ionic-angular": "0.0.4",
     "@ionic/cli-plugin-cordova": "0.0.10",
