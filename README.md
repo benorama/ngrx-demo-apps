@@ -46,7 +46,8 @@ yarn
 # Or npm install
 
 # Compile typescript into dist
-npm run build
+yarn build
+# Or npm run build
 
 yarn link
 # Or npm pack
